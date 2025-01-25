@@ -1,9 +1,8 @@
 
 /* Main container for the SGPA calculator */
-
 .sgpa-box {
   width: 100%;
-  height: 100vh;
+  height: auto; /* Adjust height for better scrolling on smaller screens */
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
@@ -12,7 +11,8 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.8s ease-out;
 }
-.title{
+
+.title {
   text-align: center;
   font-weight: 900;
   color: cornflowerblue;
@@ -39,7 +39,8 @@ label {
   margin-bottom: 5px;
 }
 
-input, select {
+input,
+select {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -48,7 +49,8 @@ input, select {
   transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   outline: none;
   border-color: #007BFF;
   transform: scale(1.02);
@@ -121,3 +123,72 @@ button:hover {
     transform: translateY(0);
   }
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sgpa-box {
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  input,
+  select {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .course-list p {
+    font-size: 14px;
+  }
+
+  .sgp-result h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sgpa-box {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  label {
+    font-size: 11px;
+  }
+
+  input,
+  select {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .course-list p {
+    font-size: 12px;
+  }
+
+  .sgp-result h3 {
+    font-size: 16px;
+  }
+}
+
